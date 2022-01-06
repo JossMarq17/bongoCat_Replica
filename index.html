@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bongo Cat</title>
+    <link rel="shortcut icon" href="/assets/favicon/favicon_bongo.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <script type="text/javascript">
+        var miau = new Audio('/assets/audio/miau.mp3');
+        var bongo0 = new Audio('/assets/audio/sounds_bongo0.mp3');
+        var bongo1 = new Audio('/assets/audio/sounds_bongo1.mp3');
+        var cowbell = new Audio('/assets/audio/sounds_cowbell.mp3');
+        var cymbal = new Audio('/assets/audio/sounds_cymbal.mp3');
+        var keyboard0 = new Audio('/assets/audio/sounds_keyboard0.mp3');
+        var keyboard1 = new Audio('/assets/audio/sounds_keyboard1.mp3');
+        var keyboard2 = new Audio('/assets/audio/sounds_keyboard2.mp3');
+        var keyboard3 = new Audio('/assets/audio/sounds_keyboard3.mp3');
+        var keyboard4 = new Audio('/assets/audio/sounds_keyboard4.mp3');
+        var keyboard5 = new Audio('/assets/audio/sounds_keyboard5.mp3');
+        var keyboard6 = new Audio('/assets/audio/sounds_keyboard6.mp3');
+        var keyboard7 = new Audio('/assets/audio/sounds_keyboard7.mp3');
+        var keyboard8 = new Audio('/assets/audio/sounds_keyboard8.mp3');
+        var keyboard9 = new Audio('/assets/audio/sounds_keyboard9.mp3');
+        var marimba0 = new Audio('/assets/audio/sounds_marimba0.mp3');
+        var marimba1 = new Audio('/assets/audio/sounds_marimba1.mp3');
+        var marimba2 = new Audio('/assets/audio/sounds_marimba2.mp3');
+        var marimba3 = new Audio('/assets/audio/sounds_marimba3.mp3');
+        var marimba4 = new Audio('/assets/audio/sounds_marimba4.mp3');
+        var marimba5 = new Audio('/assets/audio/sounds_marimba5.mp3');
+        var marimba6 = new Audio('/assets/audio/sounds_marimba6.mp3');
+        var marimba7 = new Audio('/assets/audio/sounds_marimba7.mp3');
+        var marimba8 = new Audio('/assets/audio/sounds_marimba8.mp3');
+        var marimba9 = new Audio('/assets/audio/sounds_marimba9.mp3');
+        var tambourine = new Audio('/assets/audio/sounds_tambourine.mp3');
+
+        window.addEventListener('keydown', function(e){
+    playSound(e);
+});
+
+function playSound(e) {
+    let audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+    let key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
+    if (!audio) return; //We exit the function if there is no sound to play
+    audio.currentTime = 0; //We rewind the track if it is currently been playing.
+    audio.play();
+    key.classList.add('playing');
+}
+    </script>
+
+    <div class="grid-container">
+        <div class="grid-item item1">Bongos</div>
+        <div class="grid-item item2">Cymbal</div>
+        <div class="grid-item item3">Cowbell</div>  
+        <div class="grid-item item4">Tambourine</div>
+        <div class="grid-item item5">Meow</div>
+        <div class="grid-item item6">Piano</div>
+        <div class="grid-item item7">Marimba</div>
+        <div class="grid-item item8"><button class="button" onmouseup="bongo0.play()">A</button></div>
+        <div class="grid-item item9"><button class="button" onmouseup="bongo1.play()">D</button></div>
+        <div class="grid-item item10"><button class="button" onmouseup="cymbal.play()">C</button></div>
+        <div class="grid-item item11"><button class="button" onmouseup="cowbell.play()">F</button></div>
+        <div class="grid-item item12"><button class="button" onmouseup="tambourine.play()">B</button></div>
+        <div class="grid-item item13"><button class="button" onmouseup="miau.play()">SPACE</button> </div>
+        <div class="grid-item item14"><button class="button" onmouseup="keyboard1.play()">1</button></div>
+        <div class="grid-item item15">...</div>
+        <div class="grid-item item16"><button class="button" onmouseup="keyboard9.play()">9</button></div>
+        <div class="grid-item item17"><button class="button" onmouseup="keyboard0.play()">0</button></div>
+        <div class="grid-item item18"><button class="button" onmouseup="marimba1.play()">Q</button></div>
+        <div class="grid-item item19"><button class="button" onmouseup="marimba2.play()">W</button></div>
+        <div class="grid-item item20">...</div>
+        <div class="grid-item item21"><button class="button" onmouseup="marimba0.play()">P</button></div>
+        <div class="grid-item item22">
+        </div>
+    </div>
+
+    <div class="keys">
+        <div data-key="32" class="key"></div>
+        <div data-key="65" class="key"></div>
+        <div data-key="68" class="key"></div>
+        <div data-key="67" class="key"></div>
+        <div data-key="70" class="key"></div>
+        <div data-key="66" class="key"></div>
+        <div data-key="49" class="key"></div>
+        <div data-key="50" class="key"></div>
+        <div data-key="51" class="key"></div>
+        <div data-key="52" class="key"></div>
+        <div data-key="53" class="key"></div>
+        <div data-key="54" class="key"></div>
+        <div data-key="55" class="key"></div>
+        <div data-key="56" class="key"></div>
+        <div data-key="57" class="key"></div>
+        <div data-key="48" class="key"></div>
+        <div data-key="81" class="key"></div>
+        <div data-key="87" class="key"></div>
+        <div data-key="69" class="key"></div>
+        <div data-key="82" class="key"></div>
+        <div data-key="84" class="key"></div>
+        <div data-key="89" class="key"></div>
+        <div data-key="85" class="key"></div>
+        <div data-key="73" class="key"></div>
+        <div data-key="79" class="key"></div>
+        <div data-key="80" class="key"></div>
+    </div>
+
+    <div id="audios">
+    <audio data-key="32" src="/assets/audio/miau.mp3"></audio>
+    <audio data-key="65" src="/assets/audio/sounds_bongo0.mp3"></audio>
+    <audio data-key="68" src="/assets/audio/sounds_bongo1.mp3"></audio>
+    <audio data-key="67" src="/assets/audio/sounds_cymbal.mp3"></audio>
+    <audio data-key="70" src="/assets/audio/sounds_cowbell.mp3"></audio>
+    <audio data-key="66" src="/assets/audio/sounds_tambourine.mp3"></audio>
+    <audio data-key="49" src="/assets/audio/sounds_keyboard1.mp3"></audio>
+    <audio data-key="50" src="/assets/audio/sounds_keyboard2.mp3"></audio>
+    <audio data-key="51" src="/assets/audio/sounds_keyboard3.mp3"></audio>
+    <audio data-key="52" src="/assets/audio/sounds_keyboard4.mp3"></audio>
+    <audio data-key="53" src="/assets/audio/sounds_keyboard5.mp3"></audio>
+    <audio data-key="54" src="/assets/audio/sounds_keyboard6.mp3"></audio>
+    <audio data-key="55" src="/assets/audio/sounds_keyboard7.mp3"></audio>
+    <audio data-key="56" src="/assets/audio/sounds_keyboard8.mp3"></audio>
+    <audio data-key="57" src="/assets/audio/sounds_keyboard9.mp3"></audio>
+    <audio data-key="48" src="/assets/audio/sounds_keyboard0.mp3"></audio>
+    <audio data-key="81" src="/assets/audio/sounds_marimba1.mp3"></audio>
+    <audio data-key="87" src="/assets/audio/sounds_marimba2.mp3"></audio>
+    <audio data-key="69" src="/assets/audio/sounds_marimba3.mp3"></audio>
+    <audio data-key="82" src="/assets/audio/sounds_marimba4.mp3"></audio>
+    <audio data-key="84" src="/assets/audio/sounds_marimba5.mp3"></audio>
+    <audio data-key="89" src="/assets/audio/sounds_marimba6.mp3"></audio>
+    <audio data-key="85" src="/assets/audio/sounds_marimba7.mp3"></audio>
+    <audio data-key="73" src="/assets/audio/sounds_marimba8.mp3"></audio>
+    <audio data-key="79" src="/assets/audio/sounds_marimba9.mp3"></audio>
+    <audio data-key="80" src="/assets/audio/sounds_marimba0.mp3"></audio>
+    </div>
+</body>
+</html>
